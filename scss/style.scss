@@ -1,0 +1,185 @@
+@import './header';
+@import './main';
+@import './footer';
+@import './blocks/nullstyle';
+@font-face {
+  font-family: 'Century Gothic Bold';
+  src: url('../fonts/centurygothic_bold.woff');
+}
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../fonts/centurygothic-1.woff');
+}
+
+@font-face {
+  font-family: 'Mistral';
+  src: url('../fonts/mistralnormal.woff');
+}
+
+@font-face {
+  font-family: 'Johnstown';
+  src: url('../fonts/johnstowndemo.woff');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&display=swap');
+
+body{
+  font-family: 'Century Gothic';
+  background-color: #334B35;
+}
+
+.hero{
+  background-image: url('../Image/bgc/image.jpg');
+  height: calc(100vh - clamp(80px, 7.48vw, 110px));
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__content{
+    max-width: 730px;
+    
+  }
+}
+
+.list {
+  font-family: "Livvic";
+
+  h3 {
+    font-family: "Century Gothic";
+    font-weight: 400;
+    font-size: clamp(10px, 1.36vw, 20px);
+    line-height: clamp(15px, 2.04vw, 30px);
+    text-align: center;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: clamp(25px, 3.4vw, 50px);
+    line-height: clamp(31.35px, 4.26vw, 62.75px);
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1450px;
+    gap: clamp(20px,4.08vw,60px);
+    margin-bottom: 188px;
+
+    @media (max-width: 1450px) {
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    width: 183px;
+    height: 177px;
+    background-color: #d9d9d91a;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 1s;
+
+    &:hover {
+      background-color: #f7c35f;
+      color: black;
+    }
+
+    .card-items {
+      width: 108px;
+      height: 105px;
+    }
+
+    img {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+
+
+
+//  Watch
+.watch {
+  background-image: url(/images/image7.png);
+  width: 100%;
+  height: calc(100vh - clamp(80px, 7.48vw, 110px));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 694px;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+
+      h1 {
+        text-align: center;
+        padding-bottom: 70px;
+      }
+    }
+
+    h1 {
+      font-family: Livvic;
+      margin-right: clamp(20px, 13.6vw, 200px);
+      font-weight: 700;
+      font-size: clamp(25px, 3.4vw, 50px);
+      line-height: clamp(31.25px, 4.26vw, 62.75px);
+
+      @media (max-width: 537px) {
+        text-align: center;
+        margin-right: 0px;
+      }
+    }
+
+    .button-border {
+      border: 1px solid #ffffff66;
+      position: relative;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        button {
+          width: 130px;
+          height: 130px;
+        }
+      }
+
+      button {
+        width: 80px;
+        transition: 1s;
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+        height: 80px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    p {
+      min-width: clamp(90px, 11.56vw, 170px);
+      height: 49px;
+      font-family: "Johnstown";
+      font-weight: 400;
+      font-size: clamp(15px, 2.04vw, 30px);
+      line-height: clamp(20px, 3.23vw, 47.59px);
+      color: #f7c35f;
+      position: absolute;
+      left: 100px;
+      top: 100px;
+    }
+  }
+}
+
+
